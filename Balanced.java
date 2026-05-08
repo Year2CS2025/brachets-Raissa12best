@@ -1,17 +1,12 @@
 import java.util.Stack;
-
-public class Balanced {
-
+public class Balanced{
     public static void main(String[] args) {
-
-        String[] str = {"({[]})", "({[})", "((()))", "({)}"};
-
-        for (String s : str) {
-            System.out.println(s + " -> " + isBalanced(s));
-        }
+        String[] str = {"({[]})","({[})", "((()))", "({)}"};
+        for(String s: str)
+         System.out.println(isBalanced(s));
+        
     }
-
-    public static boolean isBalanced(String s) {
+    public static boolean isBalanced(String s){
 
         Stack<Character> stack = new Stack<>();
 
@@ -46,5 +41,10 @@ public class Balanced {
 
         // If stack becomes empty, balanced
         return stack.isEmpty();
-    }
+    
+        
+     
+}
+        
+    
 }
